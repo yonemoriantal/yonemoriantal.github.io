@@ -2,80 +2,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>JYA Inc. | Mission‑Critical Project Controls & Federal Integration</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #151A30;
-  color: #FFFFFF;
-  line-height: 1.6;
-}
-a { color: #C8A75E; text-decoration: none; }
-a:hover { text-decoration: underline; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-.container { max-width: 1000px; margin: auto; padding: 50px 25px; }
-hr { border: none; border-top: 1px solid #444; margin: 40px 0; }
-h1, h2 { font-weight: 600; }
-h1 { font-size: 34px; }
-h2 { font-size: 22px; margin-top: 40px; }
-ul { padding-left: 20px; }
-nav { margin-top: 20px; }
-nav a { margin-right: 20px; }
-.footer { font-size: 14px; opacity: .85; margin-top: 50px; }
-</style>
-</head>
+  <!--
+    ============================
+    ONE-FILE MULTI-SITE TEMPLATE
+    ============================
+    Change SITE_MODE below to:
+      "JYA"         for jyainc.com
+      "HOMES_HEAR"  for homes-hear-specialist.com
 
-<body>
-<div class="container">
+    This file is built from your original design baseline. [1](https://onedrive.live.com?cid=02F0B1A977734E53&id=2F0B1A977734E53!s985493d8f726410593286303291cb6a1)
+  -->
 
-<h1>JYA Inc.</h1>
-<h2>Mission‑Critical Project Controls & Federal Integration</h2>
+  <script>
+    // === CHANGE THIS ONLY ===
+    const SITE_MODE = "JYA"; // "JYA" | "HOMES_HEAR"
+  </script>
 
-<p>
-JYA Inc. provides senior‑level project controls, engineering coordination, and
-federal / GC integration for mission‑critical facilities and programs.
-</p>
+  <title>JYA Inc. — Mission-Critical Project Controls</title>
+  <meta name="description" content="JYA Inc. provides mission-critical project controls, federal contractor integration, BIM/VDC strategy, cost engineering, and compliance-aligned documentation for high-assurance programs worldwide." />
+  <meta name="keywords" content="JYA Inc, project controls, federal contracting, BIM, VDC, cost engineering, TS/SCI, LEED, mission-critical, Omaha, Nebraska" />
+  <meta name="author" content="JYA Inc." />
 
-<p>
-Credentials include PE‑led engineering support, TS/SCI‑aligned environments,
-BIM/VDC oversight, cost and schedule stabilization, and executive advisory.
-</p>
+  <!-- Open Graph -->
+  <meta property="og:title" content="JYA Inc. — Mission-Critical Project Controls" />
+  <meta property="og:description" content="Structured oversight and executive-level clarity for programs operating in high-assurance environments." />
+  <meta property="og:type" content="website" />
 
-<hr>
+  <!-- Favicon placeholder -->
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 
-<h2>Core Capabilities</h2>
-<ul>
-  <li>Mission‑Critical Project Controls & Executive Advisory</li>
-  <li>Federal / GC Integration & Compliance Alignment</li>
-  <li>BIM / VDC Strategy and Technical Oversight</li>
-  <li>Cost Engineering, Risk, and Decision‑Ready Reporting</li>
-</ul>
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0b1a2e;
+      --slate: #1e2d40;
+      --steel: #3a4f66;
+      --accent: #4a90d9;
+      --accent-dim: #3670b0;
+      --light: #e8ecf1;
+      --white: #ffffff;
+      --divider: #2c3e55;
+      --text-main: #d0d8e2;
+      --text-muted: #8a9bb0;
+      --font-sans: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+      --font-mono: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+      --max-width: 1120px;
+      --section-py: 5rem;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--navy);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--white); }
+    .container { width: 90%; max-width: var(--max-width); margin: 0 auto; }
 
-<hr>
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(11, 26, 46, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem 0;
+    }
+    nav .brand {
+      font-size: 1.15rem; font-weight: 700; color: var(--white);
+      letter-spacing: .04em;
+    }
+    nav .brand span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 1.8rem; }
+    nav ul li a {
+      font-size: .82rem; font-weight: 500; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: .08em; transition: color .2s;
+    }
+    nav ul li a:hover { color: var(--white); }
 
-<h2>Specialized Programs</h2>
-<nav>
-  <a href="https://homes-hear-specialist.com">HOMES / HEAR Contractor Specialist</a>
-  <a href="https://jya-rural-engineering.com">USDA Rural Engineering & REAP Support</a>
-</nav>
+    /* Mobile nav toggle */
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: .25rem; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-main); margin: 5px 0; transition: .3s; }
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      nav ul {
+        display: none; flex-direction: column; position: absolute;
+        top: 100%; left: 0; right: 0; background: var(--navy);
+        border-bottom: 1px solid var(--divider); padding: 1rem 5%;
+        gap: .8rem;
+      }
+      nav ul.open { display: flex; }
+    }
 
-<hr>
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 8rem 0 6rem;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(74,144,217,.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 80%, rgba(74,144,217,.05) 0%, transparent 50%),
+        var(--navy);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero .subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-muted); max-width: 680px; margin: 0 auto 1.5rem;
+      line-height: 1.65;
+    }
+    .hero .credentials {
+      font-size: .8rem; color: var(--steel);
+      letter-spacing: .06em; text-transform: uppercase;
+      font-family: var(--font-mono);
+      margin-bottom: 2.5rem;
+    }
+    .hero .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: .75rem 2rem;
+      border-radius: 4px; font-size: .85rem; font-weight: 600;
+      letter-spacing: .04em; text-transform: uppercase; transition: all .25s;
+    }
+    .btn-primary { background: var(--accent); color: var(--white); }
+    .btn-primary:hover { background: var(--accent-dim); color: var(--white); }
+    .btn-outline {
+      border: 1px solid var(--steel); color: var(--text-main); background: transparent;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--white); }
 
-<h2>Contact</h2>
-<p>
-John Yonemori‑Antal<br>
-Plattsmouth, Nebraska / Omaha Metro<br>
-Email: john@jyainc.com<br>
-Phone: 402‑430‑5418
-</p>
+    /* ===== SECTION COMMON ===== */
+    section { padding: var(--section-py) 0; }
+    section:nth-child(even) { background: var(--slate); }
+    .section-label {
+      font-size: .7rem; text-transform: uppercase; letter-spacing: .16em;
+      color: var(--accent); font-weight: 600; margin-bottom: .5rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700; color: var(--white); margin-bottom: 1rem;
+    }
+    .section-intro {
+      max-width: 720px; color: var(--text-muted); margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .divider {
+      width: 48px; height: 3px; background: var(--accent);
+      border-radius: 2px; margin-bottom: 2rem;
+    }
 
-<div class="footer">
-© JYA Inc. — Federal and mission‑critical consulting
-</div>
-
-</div>
-</body>
-</html>
-``
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 1rem; }
