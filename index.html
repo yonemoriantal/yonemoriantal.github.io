@@ -170,3 +170,649 @@
       align-items: start;
     }
     .about-text p { margin-bottom: 1rem; }
+    .about-highlights {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;
+    }
+    .highlight-card {
+      background: var(--navy); border: 1px solid var(--divider);
+      border-radius: 6px; padding: 1.4rem;
+    }
+    .highlight-card .number {
+      font-size: 1.8rem; font-weight: 700; color: var(--accent);
+      line-height: 1;
+    }
+    .highlight-card .label {
+      font-size: .78rem; color: var(--text-muted); margin-top: .35rem;
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--navy); border: 1px solid var(--divider);
+      border-radius: 6px; padding: 2rem; transition: border-color .3s;
+    }
+    .service-card:hover { border-color: var(--accent); }
+    .service-card h3 {
+      font-size: 1.05rem; font-weight: 600; color: var(--white);
+      margin-bottom: .6rem;
+    }
+    .service-card p { font-size: .9rem; color: var(--text-muted); }
+    .service-icon {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(74,144,217,.1); border-radius: 8px; margin-bottom: 1rem;
+      color: var(--accent); font-size: 1.1rem;
+    }
+
+    /* ===== CAPABILITIES ===== */
+    .cap-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .cap-item {
+      display: flex; align-items: center; gap: .75rem;
+      padding: 1rem 1.2rem; border-radius: 6px;
+      background: var(--slate); border: 1px solid var(--divider);
+    }
+    .cap-item .cap-icon { color: var(--accent); font-size: 1rem; flex-shrink: 0; }
+    .cap-item span { font-size: .88rem; color: var(--text-main); }
+
+    /* ===== AGENCY TABLE ===== */
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    thead { background: var(--accent); }
+    thead th {
+      padding: .85rem 1rem; text-align: left;
+      font-weight: 600; color: var(--white);
+      text-transform: uppercase; letter-spacing: .06em; font-size: .72rem;
+      white-space: nowrap;
+    }
+    tbody tr { border-bottom: 1px solid var(--divider); transition: background .2s; }
+    tbody tr:hover { background: rgba(74,144,217,.06); }
+    tbody td {
+      padding: .8rem 1rem; color: var(--text-main);
+      vertical-align: top;
+    }
+    tbody td:first-child { font-weight: 600; color: var(--white); white-space: nowrap; }
+
+    /* ===== EXPERIENCE ===== */
+    .exp-timeline { position: relative; padding-left: 2rem; }
+    .exp-timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: var(--divider);
+    }
+    .exp-item { position: relative; margin-bottom: 2.5rem; }
+    .exp-item::before {
+      content: ''; position: absolute; left: -2rem; top: .45rem;
+      width: 10px; height: 10px; background: var(--accent);
+      border-radius: 50%; border: 2px solid var(--navy);
+      transform: translateX(-4px);
+    }
+    .exp-item h3 {
+      font-size: 1.05rem; font-weight: 600; color: var(--white);
+      margin-bottom: .3rem;
+    }
+    .exp-item .exp-role {
+      font-size: .82rem; color: var(--accent); text-transform: uppercase;
+      letter-spacing: .04em; margin-bottom: .5rem;
+    }
+    .exp-item p { font-size: .9rem; color: var(--text-muted); }
+
+    /* ===== CONTACT ===== */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: start;
+    }
+    .contact-info-item {
+      display: flex; gap: .75rem; align-items: flex-start;
+      margin-bottom: 1.4rem;
+    }
+    .contact-info-item .ci-icon {
+      color: var(--accent); font-size: 1rem; margin-top: .2rem; flex-shrink: 0;
+    }
+    .contact-info-item .ci-label {
+      font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--text-muted); margin-bottom: .15rem;
+    }
+    .contact-info-item .ci-value {
+      font-size: .95rem; color: var(--white);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%; padding: .75rem 1rem; margin-bottom: 1rem;
+      background: var(--navy); border: 1px solid var(--divider);
+      border-radius: 4px; color: var(--text-main);
+      font-family: var(--font-sans); font-size: .9rem; transition: border-color .2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .contact-form .btn { width: 100%; text-align: center; border: none; cursor: pointer; }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy); border-top: 1px solid var(--divider);
+      padding: 2.5rem 0; text-align: center;
+    }
+    footer p { font-size: .78rem; color: var(--text-muted); }
+    footer .footer-links { margin-top: .5rem; }
+    footer .footer-links a {
+      font-size: .75rem; color: var(--steel); margin: 0 .5rem;
+    }
+    footer .footer-links a:hover { color: var(--accent); }
+
+    /* ===== UTILITIES ===== */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======== NAVIGATION ======== -->
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <a href="#home" class="brand" id="brandText">JYA<span>.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation"
+        onclick="document.querySelector('nav ul').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <p class="credentials" id="heroCreds">PE · TS/SCI · PMP · LEED AP BD+C</p>
+      <h1 id="heroTitle">Mission-Critical<br><span>Project Controls</span></h1>
+      <p class="subtitle" id="heroSubtitle">
+        Structured oversight, disciplined reporting, and executive-level clarity for programs
+        operating in high-assurance environments—where accuracy, reliability, and accountability are non-negotiable.
+      </p>
+      <div class="cta-row">
+        <a href="#services" class="btn btn-primary" id="ctaPrimary">Explore Services</a>
+        <a href="#contact" class="btn btn-outline" id="ctaSecondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">About</p>
+      <h2 class="section-title" id="aboutTitle">Who We Are</h2>
+      <div class="divider"></div>
+
+      <div class="about-grid">
+        <div class="about-text" id="aboutText">
+          <p>
+            <strong>JYA Inc.</strong> is a Plattsmouth, Nebraska–based consulting firm led by John Yonemori-Antal, PE, PMP.
+            We deliver mission-critical project controls, cost engineering, and BIM/VDC strategy for federal agencies, defense programs,
+            and general contractors operating in high-assurance environments.
+          </p>
+          <p>
+            With a global footprint spanning CONUS and OCONUS operations, JYA Inc. brings disciplined program oversight to Tier IV data centers,
+            secure underground facilities, detention infrastructure, aviation programs, and renewable energy initiatives—consistently supporting
+            programs valued from $50M to over $2B.
+          </p>
+          <p>
+            We are registered in SAM.gov and positioned as a small disadvantaged business in a rural, underserved census tract—eligible for SBA
+            mentor-protégé and federal set-aside programs.
+          </p>
+        </div>
+
+        <div class="about-highlights" id="aboutHighlights">
+          <div class="highlight-card">
+            <div class="number" id="hl1Num">6</div>
+            <div class="label" id="hl1Lbl">Federal Agencies Served</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number" id="hl2Num">$2B+</div>
+            <div class="label" id="hl2Lbl">Largest Program Supported</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number" id="hl3Num">CONUS / OCONUS</div>
+            <div class="label" id="hl3Lbl">Global Footprint</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number" id="hl4Num">TS/SCI</div>
+            <div class="label" id="hl4Lbl">Clearance Level</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICES ======== -->
+  <section id="services">
+    <div class="container">
+      <p class="section-label">Services</p>
+      <h2 class="section-title" id="servicesTitle">What We Deliver</h2>
+      <div class="divider"></div>
+      <p class="section-intro" id="servicesIntro">
+        Five core service lines—each built for environments where failure has national-level consequences.
+      </p>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Cards are injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CAPABILITIES ======== -->
+  <section id="capabilities">
+    <div class="container">
+      <p class="section-label">Capabilities</p>
+      <h2 class="section-title" id="capsTitle">Credentials & Qualifications</h2>
+      <div class="divider"></div>
+      <p class="section-intro" id="capsIntro">
+        Professional licensure, federal clearance, and industry certifications supporting execution across demanding environments.
+      </p>
+      <div class="cap-grid" id="capsGrid">
+        <!-- Items are injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== AGENCY SUMMARY TABLE (JYA ONLY) ======== -->
+  <section id="agency-summary">
+    <div class="container">
+      <p class="section-label">Agency Summary</p>
+      <h2 class="section-title" id="agencyTitle">Experience by Agency</h2>
+      <div class="divider"></div>
+      <p class="section-intro" id="agencyIntro">
+        Federal-brief format overview of representative agency experience, roles, and program scope.
+      </p>
+
+      <div class="table-wrap" id="agencyWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Agency / Client</th>
+              <th>Key Projects</th>
+              <th>Role(s)</th>
+              <th>Scope / Impact</th>
+            </tr>
+          </thead>
+          <tbody id="agencyBody">
+            <!-- Rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIENCE ======== -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2 class="section-title" id="expTitle">Representative Experience</h2>
+      <div class="divider"></div>
+      <p class="section-intro" id="expIntro">
+        High-level summaries of mission-critical program experience across federal and contractor environments.
+      </p>
+      <div class="exp-timeline" id="expTimeline">
+        <!-- Items injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title" id="contactTitle">Start a Conversation</h2>
+      <div class="divider"></div>
+
+      <div class="contact-grid">
+        <div class="contact-details">
+          <p class="section-intro" id="contactIntro" style="margin-bottom:2rem;">
+            Ready to discuss a program, partnership, or teaming opportunity? Reach out directly—we respond within one business day.
+          </p>
+
+          <div class="contact-info-item">
+            <span class="ci-icon">✉</span>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-value"><a id="emailLink" href="mailto:john@jyainc.com">john@jyainc.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item" id="phoneRow">
+            <span class="ci-icon">☎</span>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-value"><a id="phoneLink" href="tel:+14024305418">(402) 430-5418</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item" id="officeRow">
+            <span class="ci-icon">⚑</span>
+            <div>
+              <div class="ci-label">Office</div>
+              <div class="ci-value" id="officeText">Plattsmouth, NE 68048</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item" id="regsRow">
+            <span class="ci-icon">◆</span>
+            <div>
+              <div class="ci-label">Registrations</div>
+              <div class="ci-value" id="regsText">SAM.gov · DSBS</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="ci-icon">↗</span>
+            <div>
+              <div class="ci-label">Related Sites</div>
+              <div class="ci-value" id="relatedLinks">
+                <a href="https://jyainc.com" target="_blank" rel="noopener">jyainc.com</a> ·
+                <a href="https://homes-hear-specialist.com" target="_blank" rel="noopener">homes-hear-specialist.com</a> ·
+                <a href="https://jya-rural-engineering.com" target="_blank" rel="noopener">jya-rural-engineering.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form action="#" method="post" onsubmit="return false;">
+            <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+            <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+            <input type="text" name="subject" placeholder="Subject" aria-label="Subject" />
+            <textarea name="message" placeholder="How can we help?" required aria-label="Message"></textarea>
+            <button type="submit" class="btn btn-primary" id="contactBtn">Send Message</button>
+            <p style="margin-top:.75rem;font-size:.8rem;color:var(--text-muted);">
+              Note: This form is a static placeholder. Use email for now, or wire to a form service later.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer>
+    <div class="container">
+      <p id="footerCopy">© 2026 JYA Inc. All rights reserved.</p>
+      <div class="footer-links" id="footerLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth-scroll + close mobile nav (from your original baseline) [1](https://onedrive.live.com?cid=02F0B1A977734E53&id=2F0B1A977734E53!s985493d8f726410593286303291cb6a1)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.querySelector('nav ul').classList.remove('open');
+        }
+      });
+    });
+
+    // Sticky nav background on scroll (from your original baseline) [1](https://onedrive.live.com?cid=02F0B1A977734E53&id=2F0B1A977734E53!s985493d8f726410593286303291cb6a1)
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 60
+        ? 'rgba(11, 26, 46, .97)'
+        : 'rgba(11, 26, 46, .92)';
+    });
+
+    // ===== CONTENT DATA (switches by SITE_MODE) =====
+    const data = {
+      JYA: {
+        brand: "JYA",
+        pageTitle: "JYA Inc. — Mission-Critical Project Controls",
+        desc: "JYA Inc. provides mission-critical project controls, federal contractor integration, BIM/VDC strategy, cost engineering, and compliance-aligned documentation for high-assurance programs worldwide.",
+        ogTitle: "JYA Inc. — Mission-Critical Project Controls",
+        ogDesc: "Structured oversight and executive-level clarity for programs operating in high-assurance environments.",
+        heroCreds: "PE · TS/SCI · PMP · LEED AP BD+C",
+        heroTitleHtml: 'Mission-Critical<br><span>Project Controls</span>',
+        heroSubtitle: "Structured oversight, disciplined reporting, and executive-level clarity for programs operating in high-assurance environments—where accuracy, reliability, and accountability are non-negotiable.",
+        ctaPrimary: { text: "Explore Services", href: "#services" },
+        ctaSecondary: { text: "Get in Touch", href: "#contact" },
+        aboutTitle: "Who We Are",
+        aboutHtml: `
+          <p><strong>JYA Inc.</strong> is a Plattsmouth, Nebraska–based consulting firm led by John Yonemori-Antal, PE, PMP. We deliver mission-critical project controls, cost engineering, and BIM/VDC strategy for federal agencies, defense programs, and general contractors operating in high-assurance environments.</p>
+          <p>With a global footprint spanning CONUS and OCONUS operations, JYA Inc. brings disciplined program oversight to Tier IV data centers, secure underground facilities, detention infrastructure, aviation programs, and renewable energy initiatives—consistently supporting programs valued from $50M to over $2B.</p>
+          <p>We are registered in SAM.gov and positioned as a small disadvantaged business in a rural, underserved census tract—eligible for SBA mentor-protégé and federal set-aside programs.</p>
+        `,
+        highlights: [
+          { num: "6", lbl: "Federal Agencies Served" },
+          { num: "$2B+", lbl: "Largest Program Supported" },
+          { num: "CONUS / OCONUS", lbl: "Global Footprint" },
+          { num: "TS/SCI", lbl: "Clearance Level" },
+        ],
+        servicesIntro: "Five core service lines—each built for environments where failure has national-level consequences.",
+        services: [
+          { t: "Mission-Critical Project Controls", d: "Structured oversight, disciplined reporting, and executive-level clarity for high-assurance programs." },
+          { t: "Federal / General Contractor Integration", d: "Bridging federal requirements with contractor execution to ensure alignment, compliance, and delivery." },
+          { t: "BIM / VDC Strategy & Oversight", d: "Modeling standards, coordination workflows, and digital execution strategy for complex programs." },
+          { t: "Cost Engineering & Program Assurance", d: "Independent cost analysis, risk evaluation, and assurance frameworks for informed decisions." },
+          { t: "Compliance-Aligned Documentation", d: "TS/SCI-aware documentation support aligned with federal standards and review processes." },
+          { t: "HOMES / HEAR Energy Modeling", d: "Energy rebate modeling and submission packets aligned with IRA HOMES and HEAR program requirements." },
+        ],
+        caps: [
+          "Professional Engineer (Mechanical & Electrical)",
+          "TS/SCI Security Clearance",
+          "Project Management Professional (PMP)",
+          "LEED AP BD+C",
+          "Autodesk Revit Certified Trainer",
+          "AGC BIM Certificate",
+          "SAM.gov Registered Entity",
+          "Nebraska Licensed Contractor (#24979-26)",
+          "Small Disadvantaged Business (Rural)",
+          "SBA Mentor-Protégé Eligible",
+          "CONUS & OCONUS Operations",
+          "DD-1391 & Federal Cost Estimating",
+        ],
+        showAgency: true,
+        agencies: [
+          ["DHS — U.S. Customs & Border Protection", "Nationwide detention facilities; Joint Processing Centers (Top Secret)", "Owner's Representative; Quality Assurance", "Emergency-funded task orders supporting multi-state mission-critical programs; pre-construction design and estimate reviews."],
+          ["DoD — U.S. Air Force", "NKO Tier IV Data Center (Offutt AFB); STRATCOM Tier IV Data Center; Offutt modernization", "Project Manager; Owner's Representative; Quality Assurance", "$500M+ mission-critical programs including design reviews, scheduling, execution support, and multi-era modernization."],
+          ["DoD — U.S. Army / USACE", "Yuma Proving Grounds; NETCOM/Army Hawaii; Ramstein AFB data center and tunnel", "Estimator; Professional Engineer; Owner's Representative", "Secure underground infrastructure, Tier IV data centers, modernization initiatives, and multi-prime coordination."],
+          ["DoD — U.S. Navy / NAVFAC", "China Lake NAWS (>$2B); NAVFAC Hawaii solar; Hickam AFB hangars", "Senior Estimator; Professional Engineer; Concept Design", "Large-scale aviation, solar, hangar, and energy programs delivered via design-build and concept development."],
+          ["DOJ — Federal Bureau of Investigation", "FBI Redstone Arsenal Tier IV Data Center; secure campus (~$2B)", "Owner's Representative; Quality Assurance", "Mission-critical data center delivery and secure facility modernization for national-level DOJ programs."],
+          ["Intelligence Community (NSA, USSTRATCOM, NETCOM)", "NSA Fort Meade data center; STRATCOM continuity infrastructure", "Professional Engineer; Estimator; BIM/VDC Lead", "TS/SCI mission-critical support for SCIF-grade facilities and continuity infrastructure."],
+        ],
+        expIntro: "High-level summaries of mission-critical program experience across federal defense, intelligence, and civilian agency environments.",
+        experience: [
+          { h: "Tier IV Data Center Programs", r: "Multiple Agencies — CONUS / OCONUS", p: "End-to-end project controls for Tier IV programs including NKO (Offutt AFB), STRATCOM, FBI Redstone Arsenal, NSA Fort Meade, and Ramstein AFB." },
+          { h: "Secure Underground & Continuity Infrastructure", r: "Army, NSA, USSTRATCOM", p: "Engineering and estimating for classified underground facilities supporting national continuity missions, including multi-prime coordination and DD-1391 development." },
+          { h: "Detention & Border Security Infrastructure", r: "DHS — U.S. Customs & Border Protection", p: "Owner's Representative support for detention facilities and Joint Processing Centers under emergency-funded task orders, including pre-construction reviews and QA." },
+          { h: "Aviation & Renewable Energy Programs", r: "U.S. Navy / NAVFAC", p: "Senior estimating and concept design for aviation and renewables programs including design-build cost models, 1391 support, and energy program documentation." },
+          { h: "HOMES / HEAR Energy Modeling", r: "Nebraska & Iowa — Residential / Commercial", p: "Developing submission packets and unified project dossiers for IRA-funded energy rebate programs; providing modeling and contractor partnership support." },
+        ],
+        contactIntro: "Ready to discuss a program, partnership, or teaming opportunity? Reach out directly—we respond within one business day.",
+        email: "john@jyainc.com",
+        phone: "(402) 430-5418",
+        phoneHref: "tel:+14024305418",
+        office: "Plattsmouth, NE 68048",
+        regs: "SAM.gov · DSBS · NE License #24979-26",
+        footer: "© 2026 JYA Inc. All rights reserved.",
+      },
+
+      HOMES_HEAR: {
+        brand: "HOMES/HEAR",
+        pageTitle: "HOMES / HEAR Contractor Specialist — Program-Aligned Support",
+        desc: "HOMES / HEAR Contractor Specialist: program-aligned energy modeling, documentation, and submission support for IRA rebate implementations.",
+        ogTitle: "HOMES / HEAR Contractor Specialist",
+        ogDesc: "Program-aligned modeling and documentation support for HOMES and HEAR implementations.",
+        heroCreds: "HOMES · HEAR · IRA · DOE · State Programs",
+        heroTitleHtml: 'HOMES / HEAR<br><span>Contractor Specialist</span>',
+        heroSubtitle: "Program-aligned energy modeling, documentation, and submission support for HOMES and HEAR rebate implementations—built for contractors and administrators.",
+        ctaPrimary: { text: "Explore Services", href: "#services" },
+        ctaSecondary: { text: "Engage", href: "#contact" },
+        aboutTitle: "What This Site Provides",
+        aboutHtml: `
+          <p><strong>JYA Inc.</strong> operates the HOMES / HEAR Contractor Specialist program to support IRA-funded residential and light commercial energy upgrades.</p>
+          <p>We help contractors and implementation partners align field scope with program rules, ensuring measure selection, documentation, and submission artifacts are review-ready.</p>
+          <p>Engage early—alignment before submission reduces rework, delays, and rejected packets.</p>
+        `,
+        highlights: [
+          { num: "IRA", lbl: "Program Alignment" },
+          { num: "HOMES / HEAR", lbl: "Rebate Workflows" },
+          { num: "NE / IA", lbl: "Regional Coverage" },
+          { num: "QA", lbl: "Review-Ready Packets" },
+        ],
+        servicesIntro: "Focused service lines for contractors and administrators operating under HOMES / HEAR requirements.",
+        services: [
+          { t: "HOMES / HEAR Energy Modeling", d: "Modeling support aligned to program requirements and measure selection." },
+          { t: "Program-Aligned Documentation", d: "Documentation and narratives structured for state program review workflows." },
+          { t: "Contractor Scope Review", d: "Scope alignment checks to reduce rework and prevent submission gaps." },
+          { t: "Submission Packet Assembly", d: "Organized, review-ready artifacts and checklists for faster approvals." },
+          { t: "QA / Compliance Review", d: "Pre-submission QA to minimize rejected or delayed packets." },
+          { t: "Coordination Support", d: "Clarifying contractor/admin interfaces and sequencing expectations." },
+        ],
+        caps: [
+          "HOMES / HEAR Technical Requirements",
+          "Energy Modeling & Measure Selection",
+          "Program Documentation & Narratives",
+          "QA Review Support",
+          "Contractor/Admin Coordination",
+          "Submission Checklisting",
+          "Regional Implementation Awareness (NE/IA)",
+          "Secure, disciplined documentation workflow",
+        ],
+        showAgency: false,
+        agencies: [],
+        expIntro: "Representative focus areas for HOMES / HEAR implementations and contractor workflows.",
+        experience: [
+          { h: "Measure Alignment & Modeling", r: "HOMES / HEAR", p: "Aligning modeling inputs and measure selection to program requirements." },
+          { h: "Submission Artifacts", r: "State Programs", p: "Building clean, review-ready submission packets and documentation bundles." },
+          { h: "Contractor Workflow Support", r: "Field Execution", p: "Reducing rework through upfront scope alignment and QA review." },
+        ],
+        contactIntro: "Ready to support a HOMES or HEAR project? Engage early to ensure program alignment before submission.",
+        email: "john@jyainc.com",
+        phone: "(402) 430-5418",
+        phoneHref: "tel:+14024305418",
+        office: "Nebraska / Iowa (regional coverage)",
+        regs: "Program support site (GitHub Pages) · HTTPS enforced",
+        footer: "© 2026 JYA Inc. — HOMES / HEAR Contractor Specialist",
+      }
+    };
+
+    const cfg = data[SITE_MODE] || data.JYA;
+
+    // Apply head meta
+    document.title = cfg.pageTitle;
+    document.querySelector('meta[name="description"]').setAttribute("content", cfg.desc);
+    document.querySelector('meta[property="og:title"]').setAttribute("content", cfg.ogTitle);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", cfg.ogDesc);
+
+    // Brand + hero
+    document.getElementById("brandText").innerHTML = (cfg.brand === "JYA" ? "JYA<span>.</span>" : "HOMES<span>.</span>");
+    document.getElementById("heroCreds").textContent = cfg.heroCreds;
+    document.getElementById("heroTitle").innerHTML = cfg.heroTitleHtml;
+    document.getElementById("heroSubtitle").textContent = cfg.heroSubtitle;
+    document.getElementById("ctaPrimary").textContent = cfg.ctaPrimary.text;
+    document.getElementById("ctaPrimary").setAttribute("href", cfg.ctaPrimary.href);
+    document.getElementById("ctaSecondary").textContent = cfg.ctaSecondary.text;
+    document.getElementById("ctaSecondary").setAttribute("href", cfg.ctaSecondary.href);
+
+    // About
+    document.getElementById("aboutTitle").textContent = cfg.aboutTitle;
+    document.getElementById("aboutText").innerHTML = cfg.aboutHtml;
+    document.getElementById("hl1Num").textContent = cfg.highlights[0].num;
+    document.getElementById("hl1Lbl").textContent = cfg.highlights[0].lbl;
+    document.getElementById("hl2Num").textContent = cfg.highlights[1].num;
+    document.getElementById("hl2Lbl").textContent = cfg.highlights[1].lbl;
+    document.getElementById("hl3Num").textContent = cfg.highlights[2].num;
+    document.getElementById("hl3Lbl").textContent = cfg.highlights[2].lbl;
+    document.getElementById("hl4Num").textContent = cfg.highlights[3].num;
+    document.getElementById("hl4Lbl").textContent = cfg.highlights[3].lbl;
+
+    // Services
+    document.getElementById("servicesIntro").textContent = cfg.servicesIntro;
+    const servicesGrid = document.getElementById("servicesGrid");
+    servicesGrid.innerHTML = "";
+    cfg.services.forEach(s => {
+      const card = document.createElement("div");
+      card.className = "service-card";
+      card.innerHTML = `
+        <div class="service-icon">◆</div>
+        <h3>${s.t}</h3>
+        <p>${s.d}</p>
+      `;
+      servicesGrid.appendChild(card);
+    });
+
+    // Capabilities
+    const capsGrid = document.getElementById("capsGrid");
+    capsGrid.innerHTML = "";
+    cfg.caps.forEach(c => {
+      const item = document.createElement("div");
+      item.className = "cap-item";
+      item.innerHTML = `<span class="cap-icon">✓</span><span>${c}</span>`;
+      capsGrid.appendChild(item);
+    });
+
+    // Agency table (JYA only)
+    const agencySection = document.getElementById("agency-summary");
+    if (!cfg.showAgency) {
+      agencySection.style.display = "none";
+    } else {
+      const agencyBody = document.getElementById("agencyBody");
+      agencyBody.innerHTML = "";
+      cfg.agencies.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td>`;
+        agencyBody.appendChild(tr);
+      });
+    }
+
+    // Experience timeline
+    document.getElementById("expIntro").textContent = cfg.expIntro;
+    const expTimeline = document.getElementById("expTimeline");
+    expTimeline.innerHTML = "";
+    cfg.experience.forEach(e => {
+      const div = document.createElement("div");
+      div.className = "exp-item";
+      div.innerHTML = `
+        <h3>${e.h}</h3>
+        <div class="exp-role">${e.r}</div>
+        <p>${e.p}</p>
+      `;
+      expTimeline.appendChild(div);
+    });
+
+    // Contact
+    document.getElementById("contactIntro").textContent = cfg.contactIntro;
+    document.getElementById("emailLink").textContent = cfg.email;
+    document.getElementById("emailLink").setAttribute("href", "mailto:" + cfg.email);
+    document.getElementById("phoneLink").textContent = cfg.phone;
+    document.getElementById("phoneLink").setAttribute("href", cfg.phoneHref);
+    document.getElementById("officeText").innerHTML = cfg.office.replace(/\n/g, "<br>");
+    document.getElementById("regsText").textContent = cfg.regs;
+
+    // Footer
+    document.getElementById("footerCopy").textContent = cfg.footer;
+  </script>
+</body>
+</html>
